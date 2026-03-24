@@ -15,13 +15,13 @@ public abstract class Refill implements InkSource {
     }
 
     @Override
-    public boolean hasInk() {
+    public boolean noInk() {
         return inkLevel <= 0;
     }
 
     @Override
     public void write() {
-        if (hasInk()) {
+        if (noInk()) {
             throw new IllegalStateException("Refill is empty! Please replace the refill.");
         }
         inkLevel -= 10;

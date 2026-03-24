@@ -16,7 +16,7 @@ public abstract class Pen {
         if (!mechanism.isOpen()) {
             throw new IllegalStateException("Pen is closed! Open the pen before writing.");
         }
-        if (inkSource.hasInk()) {
+        if (inkSource.noInk()) {
             throw new IllegalStateException("No ink left! Please replace or refill the ink source.");
         }
         inkSource.write();

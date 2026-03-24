@@ -21,13 +21,13 @@ public class InkReservoir implements InkSource {
     }
 
     @Override
-    public boolean hasInk() {
+    public boolean noInk() {
         return inkLevel <= 0;
     }
 
     @Override
     public void write() {
-        if (hasInk()) {
+        if (noInk()) {
             throw new IllegalStateException("Reservoir is empty! Please refill the ink.");
         }
         inkLevel -= 10;
