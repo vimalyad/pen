@@ -205,8 +205,5 @@ state — a subtle but serious bug. `Supplier::get` produces a fresh instance pe
 javac -d out $(find . -name "*.java")
 
 # Run
-java -cp out pen.src.main.Main
+java -cp out src.Main
 ```
-
-> Requires **JDK 17+**. Make sure your IntelliJ Project SDK, Module SDK, and Java Compiler target are all set to the
-> same version.
